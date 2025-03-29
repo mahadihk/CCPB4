@@ -1,0 +1,267 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Theme Colors (According to Given Design)*/
+:root {
+  --color-bg: #24272b;
+  --color-white: #e9e9e9;
+  --color-primary: #130449;
+  --color-hover: #042580;
+}
+
+/*Universal Selector*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.brand {
+  color: var(--color-white);
+  font-size: 30px;
+}
+
+.navbar{
+  background-color: var(--color-primary);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;  
+  position: relative;
+  z-index: 1;
+}
+
+
+.navbar-right .menu, 
+.dropdown,
+.dropdown-1 {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-right .menu  li {
+  padding: 10px 30px;  
+  position: relative;  
+  transition: all 0.2s;
+}
+
+/*Under line effects on Menu item*/
+.menu  li::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: #9afdfd;
+  transition: width .2s;
+}
+
+/*Effects on hover state*/
+.menu  li:hover::after{
+  width: 100%;
+}
+
+.navbar-right .menu  li a{
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.navbar-right .menu li a:hover {
+  color: var(--color-white);
+}
+
+
+ul li:hover{
+  background-color: var(--color-hover);
+}
+
+
+/* Info Area */
+.info{
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c1847;
+}
+
+.head{
+  width: 60%;
+  margin: 1rem auto 3rem auto;
+  box-sizing: border-box;
+  padding: 3rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.head h1{
+  font-size: 3rem;
+  color: #fff;
+}
+
+.head h3{
+  font-size: 1.5rem;
+  color: #9afdfd;
+}
+
+
+/* Content Area */
+.content-area{
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2c1847;
+}
+
+.content{
+  width: 60%;
+  margin: 1rem auto 3rem auto;
+  box-sizing: border-box;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.timeline{
+  width: 50%;
+  position: relative;
+  padding: 1rem 3rem;
+}
+
+.timeline-step{
+  padding: 1.25rem 2.5rem;
+  background-color: #e9e9e9;
+  position: relative;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.left{
+  left: 0;
+}
+
+.right{
+  left: 50%;
+}
+
+.timeline .icon{  
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 2rem;
+  right: -1.25rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.timeline img{
+  width: 25px;
+}
+
+.right .icon{
+  left: -1.25rem;
+}
+
+.timeline-step .title{
+  font-weight: 600;
+}
+
+.timeline-step small{
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.left-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-left: 1rem solid #e9e9e9;
+}
+
+.right-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-right: 1rem solid #e9e9e9;
+}
+
+.content::after{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #fff;
+  margin-left: -3px;
+}
+
+/* Footer */
+.footer-area{
+  width: 100%;
+  min-height: 10vh;
+  background-color: #010102;
+}
+
+.footer{
+  width: 70%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright,
+.dev{
+  color: #ffffff;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.devinfo{
+  text-decoration: none;
+  margin-left: 0.5rem;
+  color: #d4cfcf;
+}
+
+.devinfo:hover{
+  color: #a8e6ff;
+  text-decoration: underline wavy;
+}
+
+.fa-copyright{
+  
+  margin-right: 0.5rem;
+}
+
+.fa-heart{
+  color: #ff0000;
+  margin: 0 0.5rem;
+}
